@@ -3,14 +3,12 @@
 .work-sans {
   font-family: "Work Sans", serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
 }
 /* Common Style */
-.navbar{
-    display: flex;
-}
 .cmn-h3{
+    color: black;
     font-size: 2.8rem;
     font-weight: 700;
 }
@@ -30,8 +28,55 @@
     font-size: 1.25rem;
     font-weight: 600;
 }
-
+*{
+    text-decoration: none;
+    list-style-type: none;
+}
+header{
+    height: 1322px;
+    background-color: rgba(255, 144, 14, 0.1);
+}
+/* Navbar Style */
 .navbar{
+    display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-inline: 20px;
+}
+.menu-icon{
+    display: none;
+}
+.nav-menu{
+    display: flex;
+    gap: 50px;
+}
+.nav-menu li{
+    width: fit-content;
+    color: #424242;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* Responsive Changes */
+/* For Tablet */
+@media screen  and (min-width: 576px) and (max-width: 992px){
+    .nav-menu{
+        gap: 20px;
+    }
+    .cmn-h3{
+        font-size: 2rem;
+    }
+}
+/* For Mobile */
+@media screen  and (max-width: 576px){
+    .nav-menu{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+    }
+    
 }
