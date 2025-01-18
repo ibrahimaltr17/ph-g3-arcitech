@@ -13,27 +13,32 @@
     font-weight: 700;
 }
 .cmn-h3>span{
-    font: #FF900E;
+    color: #FF900E;
+}
+.cmn-h5{
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 .cmn-p{
-    font: #727272;
+    color: rgba(114, 114, 114, 1);
     font-size: 1rem;
 }
 .btn{
     padding: 20px 24px;
-    color: #727272;
+    color: white;
     border-radius: 8px;
+    background-color: #FF900E;
     height: fit-content;
     width: fit-content;
     font-size: 1.25rem;
     font-weight: 600;
+    border: none;
 }
 *{
     text-decoration: none;
     list-style-type: none;
 }
 header{
-    height: 1322px;
     background-color: rgba(255, 144, 14, 0.1);
 }
 /* Navbar Style */
@@ -60,23 +65,112 @@ header{
     font-weight: 500;
 }
 
+/* Header Content */
+.header-content{
+    max-width: 862px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+    margin-top: 90px;
+}
+.header-content h1{
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* header Image */
+.banner-image{
+    max-width: 1440px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+.banner-image img{
+    width: 100%;
+    margin-block: 50px;
+}
+
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+/* Feature section Style */
+.feature{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 85px;
+    gap: 50px;
+}
+.team-img{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.team-img img{
+    width: 100%;
+    border-radius: 8px;
+}
+.feature-content{
+    max-width: 537px;
+}
+.feature-content button{
+    margin-top: 20px;
+}
+#linier{
+    font-weight: 400;
+    color: #727272;
+}
+
+.experience-content{
+    width: 50%;
+}
+
 /* Responsive Changes */
 /* For Tablet */
 @media screen  and (min-width: 576px) and (max-width: 992px){
+    /* Header */
     .nav-menu{
         gap: 20px;
     }
     .cmn-h3{
         font-size: 2rem;
     }
+    /* Feature */
+    .feature{
+        flex-direction: column-reverse;
+    }
+    .team-img{
+        width: 100%;
+    }
+    .feature-content{
+        text-align: center;
+    }
 }
+
 /* For Mobile */
 @media screen  and (max-width: 576px){
+    /* Header */
     .nav-menu{
         display: none;
     }
     .menu-icon{
         display: block;
+    }
+    /* Feature */
+    .feature{
+        flex-direction: column-reverse;
+    }
+    .team-img{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .feature-content{
+        text-align: center;
     }
     
 }
